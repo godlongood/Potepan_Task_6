@@ -10,7 +10,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header> 
+    <p class="header_text">スケジュール管理アプリ</p>
+  </header>
+
   <body>
+
+    <!-- 成功フラッシュメッセージの表示　-->
+    <% if notice %>
+        <p class="notice"><%= notice %></p>
+    <% end %>
+
     <%= yield %>
+
+    <div class="debug"><%= debug(params) if Rails.env.development? %></div> <!--開発環境のみでデバッグ情報を表示-->
+
   </body>
 </html>

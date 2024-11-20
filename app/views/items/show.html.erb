@@ -1,0 +1,30 @@
+<div class="index_link">
+    <ul>
+        <li><%= link_to "← 一覧に戻る", items_path %></li>
+    </ul>
+</div>
+
+<h3 class="show_header_text"><%= @item.title %></h3>
+
+<p class="show_edit_button"><%= link_to "編集", edit_item_path %></p>
+
+<table class="show_table">
+    <tr>
+        <th>開始日</th>
+        <td><%= @item.start %></td>
+    </tr>
+    <tr>
+        <th>終了日</th>
+        <td><%= @item.end %></td>
+    </tr>
+    <tr>
+        <th>終日</th>
+        <td><%= @item.allday %></td>
+    </tr>
+    <tr>
+        <th>メモ</th>
+        <td><%= @item.memo %></td>
+    </tr>
+</table>
+
+

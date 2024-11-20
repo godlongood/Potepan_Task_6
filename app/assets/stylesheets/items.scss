@@ -1,0 +1,320 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* index */
+
+header{
+    background-color: #1c1d3b;
+    height: 50px;
+    position: fixed;
+    top: 0; //天井寄せ
+    width: 100%;
+}
+
+.header_text{
+    font-size:14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: white;
+    text-align: center;
+}
+
+body{
+    margin-left: 0; //左の隙間消し
+    margin-right: 0;
+    margin-top: 80px;
+}
+
+.index_title{
+    margin-right: 50px;
+    text-align: right;
+}
+
+.index{
+    font-size: 18px;
+    font-weight: 700;
+    float: left;
+    margin-left: 200px;
+}
+
+.index_new{
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    margin-right: 150px;
+    color: #fff;
+    background-color: blue;
+}
+.index_new:hover{
+    color: #fff;
+    background-color: blue;
+}
+
+
+
+.schedule{
+    margin:0 auto; /* ブロック要素の中央寄せ */
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border: rgba(0,0,0,0.2) 1px solid;
+    border-collapse: collapse; /* セルの隙間をなくす */
+}
+
+.index_table th {
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.index_table td {
+    background-color: white;
+    padding: 10px 20px;
+    text-align: center; /* インライン要素の中央寄せ */
+    border-top:1px solid rgba(0,0,0,0.2); /* 上線を引く */
+}
+
+.index_link a {
+    text-decoration: none; /* リンクの下線を消す */
+    color: rgb(76, 155, 240); 
+}
+
+
+.notice {
+    background-color: #ccf;
+    padding: 5px;
+}
+
+footer{
+    border: rgba(0,0,0,0.2) 1px solid; /*境界線の指定 薄くするためrgbaで指定*/
+    width: 80%;
+    margin:0 auto /* ブロック要素の中央寄せ */
+}
+
+.Total{
+    margin-top: 18px;
+    margin-left: 30px;
+    font-size: 12px;
+    float:left; /* 左寄せで、下の要素を右に */
+}
+
+.Total span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.today{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    text-align: right;
+    color:  rgba(0,0,0,0.5);
+}
+
+.debug{ /* デバッグ */
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+/* form */
+
+.form_table{
+    margin:0 auto; /* ブロック要素の中央寄せ */
+}
+
+.form_table tr {
+    display: flex;
+    flex-direction: column; /* 縦並べに */
+    align-items: flex-start; /* 左揃えに */
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.form_table input[type="text"] { /* 入力フォームにテキスト属性を付与することでtext_fieldフォームサイズを変更　*/
+    height: 30px; 
+    width: 815px; 
+    font-size: 12px;
+    padding: 10px; /* テキストエリア内の余白 */
+}
+
+.form_table input[type="date"] { /* 入力フォームにテキスト属性を付与することでdateフォームサイズを変更　*/
+    height: 40px; 
+    width: 400px; 
+    font-size: 12px; 
+}
+
+.form_start{
+    float:left; /* 開始日と終了日を横並べに */
+    margin-right: 20px;
+}
+
+.form_allday{
+    display: flex;
+    flex-direction: row; /* 横並べに */
+    gap: 15px; /* チェックボックスとラベルの間に余白 */
+}
+
+.form_table textarea { /* text_area */
+    height: 60px; 
+    width: 815px; 
+    font-size: 12px; /* フォントサイズを指定 */
+    padding: 10px; /* テキストエリア内の余白 */
+}
+
+.form_footer ul{
+    display: flex;
+    flex-direction: row; /* 横並べに */
+    gap: 15px;
+    justify-content: center; /* アイテムを中央に配置 */
+    margin-left: 550px;
+}
+
+.form_footer li{
+    list-style:none; /* 丸を消す */
+}
+
+.form_footer li a {
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+.to_index_button { /* リンクをボタン風に */
+    border:rgba(0,0,0,0.2) 1px solid;
+    border-radius: 0.5rem;
+    padding: 10px 20px; /* 上下左右　*/
+    font-size: 12px;
+}
+
+.to_index_button a{ /* 文字の色を指定 */
+    color: black; 
+}
+
+.submit_button{
+    color: white;
+    background-color: blue;
+    border:rgba(0,0,0,0.2) 1px solid;
+    border-radius: 0.5rem;
+    padding: 9.5px 20px; /* 上下左右　*/
+    font-size: 12px;
+}
+
+.error_form{
+    border:red 1px solid;
+    margin:0 auto; /* ブロック要素の中央寄せ */
+    width: 40%;
+    padding-top: 10px;
+}
+
+.alert-danger{
+    display: flex;
+    justify-content: center; /* アイテムを中央に配置 */
+    color: red;
+}
+
+.error_explanation_class{
+    display: flex;
+    justify-content: center; /* アイテムを中央に配置 */
+    margin-left: -60px;
+    color: red;
+}
+
+.error_explanation_class li{ /* each doだけど効いた */
+    list-style:none;
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------*/
+
+/* new */
+
+.new_header_text{
+    margin-left: 500px;
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+/* show */
+
+.index_link{
+    margin-left: 620px;
+}
+
+.index_link li{
+    list-style:none;
+}
+
+.index_link li a{
+    color: blue;
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+.show_header_text{
+    font-size: 20px;
+    margin-left: 650px;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.show_edit_button{
+    border:rgb(76, 155, 240) 1px solid;
+    border-radius: 0.5rem;
+    font-size: 12px;
+    padding: 10px;
+    width: 50px;
+    text-align:center;
+    margin:20px auto; /* ブロック要素の中央寄せ */
+    margin-right: 660px;
+    margin-bottom: -40px;
+}
+
+.show_edit_button a {
+    text-decoration: none; /* リンクの下線を消す */
+    color: rgb(76, 155, 240); 
+}
+
+.show_table{
+    display: flex;
+    justify-content: center; /* アイテムを中央に配置 */
+    margin-top: 100px;
+    width: 100%;
+}
+
+.show_table tr {
+    display: flex;
+    align-items: stretch; /* 子要素の高さを自動調整  heightを効かせられるように*/
+    width: 600px;
+    border: rgba(128, 128, 128, 0.6) 1px solid;
+}
+
+.show_table th{
+    display: flex;
+    padding: 15px;
+    width: 50px;
+    height: auto;
+    background-color: rgba(128, 128, 128, 0.3);
+    align-items: center; /* 垂直方向中央揃え flexの時有効 */
+    justify-content: center; /* 水平方向中央揃え flexの時有効 */                                              
+}
+
+.show_table td{
+    padding: 15px;
+    width: 390px;
+    overflow-wrap: break-word; /* 長い単語を折り返し */
+}
+

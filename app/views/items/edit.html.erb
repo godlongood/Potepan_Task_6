@@ -1,0 +1,14 @@
+<h3>ユーザー編集</h3>
+
+<%= form_with model: @item do |f| %> <!--コントローラのnewで設定-->
+<%= render 'shared/error_messages' %> <!-- エラーメッセージ -->
+<%= render "shared/form", f: f  %> <!--renderの場合には、 f をパーシャルに渡す -->
+
+    <div class="form_footer">
+        <ul>
+            <li class="to_index_button"><%= link_to "キャンセル", items_path %></li>
+            <li><%= f.submit "登録完了する", class: "submit_button"%></li> <!--createアクションで実装-->
+        </ul>
+    </div>
+
+<% end %>
