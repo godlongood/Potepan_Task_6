@@ -1,0 +1,28 @@
+    <table class="form_table">
+        <tr>
+            <th><%= f.label :title ,"タイトル" %></th> <!-- 紐付け -->
+            <td><%= f.text_field :title, placeholder: "タイトル" %></td> <!-- 一行入力 -->
+        </tr>
+
+        <tr class="form_start">
+            <th><%= f.label :start ,"開始日" %></th>
+            <td><%= f.date_field :start %></td>
+        </tr>
+
+        <tr>
+            <th><%= f.label :end ,"終了日" %></th>
+            <td><%= f.date_field :end %></td>
+        </tr>
+
+        <tr>
+            <td class="form_allday">
+                <%= f.check_box :allday %>
+                <%= f.label :allday, "終日の場合はチェックをいれます" %>
+            </td>
+        </tr>
+
+        <tr>
+            <th><%= f.label :memo ,"メモ" %></th>
+            <td><%= f.text_area :memo, placeholder: "メモ" %></td> <!-- 複数行入力 placeholderで初期値入力 -->
+        </tr>
+    </table>

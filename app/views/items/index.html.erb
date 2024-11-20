@@ -1,0 +1,44 @@
+<div class="index_title">
+<p class="index">予定一覧</p>
+<%= link_to "+ 新規追加", new_item_path, class:"index_new" %> <!--button_toの場合にはハッシュ形式でクラス指定-->
+</div>
+
+<table class="schedule">
+    <thead>
+        <tr class="index_table">
+            <th>ID</th>
+            <th>タイトル</th>
+            <th>開始日</th>
+            <th>終了日</th>
+            <th>終日</th>
+            <th>更新日</th>
+            <th>詳細</th>
+            <th>編集</th>
+            <th>削除</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @items.each do |item| %>
+        <tr class="index_table">
+            <td><%= item.id %></td>
+            <td><%= item.title %></td>
+            <td><%= item.start.present? ? I18n.l(item.start, format: :short) : "-" %></td> <!-- ja.yml -->
+            <td><%= item.end.present? ? I18n.l(item.end, format: :short) : "-" %></td>
+            <td><%= item.allday ? "○" : "" %></td> <!--item.alldayがtrueの時に「○」が表示され、falseの時には空欄が表示-->
+            <td><%= item.updated_at? ? I18n.l(item.updated_at, format: :long) : "-" %></td>
+            <td class="index_link"><%= link_to "詳細", item_path(item) %></td> <!--詳細ページへ 引数（id)を渡す-->
+            <td class="index_link"><%= link_to "編集",  edit_item_path(item) %></td> <!-- 編集ページへ 引数（id)を渡す-->
+            <td class="index_link"><%= link_to "削除",  item, method: :delete, data: { confirm: "本当に削除しますか？" } %></td> <!-- item   DELETE /items/:id(.:format)  items#destroy-->
+
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<footer>
+<div class="Total">予定合計: <span><%= @items.count %></span> 件</div> <!-- 予定の合計数を表示 -->
+<p class="today">本日:<%= l(Date.today, format: :short) %></p><!--日付を表示-->
+</footer>
+
+

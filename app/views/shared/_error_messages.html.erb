@@ -1,0 +1,19 @@
+<% if flash[:alert] %>
+<div class="error_form">
+<% if flash[:alert] %>
+    <div class="alert-danger">
+        <%= flash[:alert] %>
+    </div>
+<% end %>
+
+<% if @item.errors.any? %>
+    <div id="error_explanation" class="error_explanation_class"> 
+        <ul>
+            <% @item.errors.full_messages.each do |msg| %> <!-- デフォルト文をja.ymlで一部変換-->
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+</div>
+<% end %>
